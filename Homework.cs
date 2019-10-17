@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -73,6 +73,10 @@ namespace HomeWork
                 users[currentUserCount] = user;
                 currentUserCount++;
             }
+            else
+            {
+                Console.WriteLine("User limit only " + maxUserCount + " !");
+            }
             return user;
         }
 
@@ -116,6 +120,29 @@ namespace HomeWork
                 Console.WriteLine();
                 Console.WriteLine();
             }
+        }
+
+        public static void Fibonacci(int number)
+        {
+            int j = 1;
+            for(int i = 1; i < number;i+=j)
+            {
+                Console.Write(i);
+                j = i - j;
+            }
+        }
+
+
+        public static int Factorial(int number)
+        {
+            Console.WriteLine();
+            int result = 1;
+            for(int i = 1;i <= number; i++)
+            {
+                result = result * i;
+            }
+            Console.WriteLine("Factorial: " + result);
+            return result;
         }
     }
 }
